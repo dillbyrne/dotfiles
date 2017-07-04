@@ -1,0 +1,125 @@
+"""""""""""""""""""""""""""""""""""""""""""""""
+" General Settings
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab	" default indentation prefs
+set list												" show invisible characters
+set listchars=tab:▸\ ,eol:¬								" set invisible characters
+set nocompatible										" enable vim enhancements
+set t_Co=256											" enable 256 color support
+set number												" show line numbers
+syntax on												" syntax highlighting
+set showmatch											" show matching brackets
+set ruler												" show current position at bottom
+set spelllang=en_gb										" enable spelling language
+set hlsearch											" highlight searches"
+set laststatus=2										" always show status line
+set noshowmode											" hide mode. Airline plugin provides it
+set smartindent											" use smart indentation
+set cursorline											" highlight current line
+set encoding=utf8
+
+" Only do this if vim was compiled with autocmd
+if has("autocmd")
+
+	"Enable filetype detection
+	filetype plugin indent on
+
+	"Syntax of these languages is fussy over tabs vs spaces
+	autocmd Filetype make setlocal ts=8 sts=8 sw=8 noet
+
+	"Customisations based on filetype
+	autocmd Filetype html setlocal ts=2 sts=2 sw=2 noet
+	autocmd Filetype css setlocal ts=2 sts=2 sw=2 noet
+	autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 noet
+	autocmd Filetype java setlocal ts=4 sts=4 sw=4 noet
+	autocmd Filetype pyton setlocal ts=4 sts=4 sw=4 noet
+	autocmd Filetype c setlocal ts=4 sts=4 sw=4 noet
+
+	autocmd BufRead,BufNewFile *.md  setlocal spell
+	autocmd BufRead,BufNewFile *.txt setlocal spell
+
+	" Open NERDTree if vim was started with no files
+	autocmd StdinReadPre * let s:std_in=1
+	autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+endif
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+" Keymaps
+"""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <Leader>t :TagbarToggle<CR>
+nnoremap <Leader>n :NERDTreeToggle<CR>
+" Remove trailing whitespaces
+nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+
+" Disable arrow keys in normal ,visual and insert modes
+nnoremap <Up> <NOP>
+nnoremap <Down> <NOP>
+nnoremap <Left> <NOP>
+nnoremap <Right> <NOP>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
+vnoremap <Up> <NOP>
+vnoremap <Down> <NOP>
+vnoremap <Left> <NOP>
+vnoremap <Right> <NOP>
+"
+" Firefox Addon Dev
+"
+
+" exec jpm run
+nnoremap <Leader>ffr :!jpm run -b ff -p test<CR>
+" exec jpm test
+nnoremap <Leader>fft :!jpm test -v -b ff -p test<CR>
+" exec jpm xpi
+nnoremap <Leader>ffx :!jpm xpi<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin prefs
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+"
+" Airline
+"
+let g:airline_theme = 'onehalfdark'
+let g:airline_powerline_fonts = 1
+
+"
+"""""""""""""""""""""""""""""""""""""""""""""""
+"Colors Preferences
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+
+colorscheme onehalfdark
+set termguicolors
+
+" Invisible character colors
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#3a4a59
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+"Font Preferences
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+" Set Gvim font
+set guifont=Liberation\ Mono\ For\ Powerline\ 9
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+"Syntastic Preferences
+"""""""""""""""""""""""""""""""""""""""""""""""
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0

@@ -1,0 +1,20 @@
+[submodule "pack/plugins/start/vim-airline"]
+	path = pack/plugins/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+	ignore = untracked
+[submodule "pack/plugins/start/nerdtree"]
+	path = pack/plugins/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+	ignore = untracked
+[submodule "pack/plugins/start/syntastic"]
+	path = pack/plugins/start/syntastic
+	url = https://github.com/vim-syntastic/syntastic
+	ignore = untracked
+[submodule "pack/plugins/start/vim-devicons"]
+	path = pack/plugins/start/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons
+	ignore = untracked
+[submodule "pack/plugins/start/tagbar"]
+	path = pack/plugins/start/tagbar
+	url = https://github.com/majutsushi/tagbar
+	ignore = untracked
