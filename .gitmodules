@@ -1,0 +1,15 @@
+[submodule "vim/pack/plugins/start/nerdtree"]
+	path = vim/pack/plugins/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "vim/pack/plugins/start/syntastic"]
+	path = vim/pack/plugins/start/syntastic
+	url = https://github.com/vim-syntastic/syntastic
+[submodule "vim/pack/plugins/start/devicons"]
+	path = vim/pack/plugins/start/devicons
+	url = https://github.com/ryanoasis/vim-devicons
+[submodule "vim/pack/plugins/start/tagbar"]
+	path = vim/pack/plugins/start/tagbar
+	url = https://github.com/majutsushi/tagbar
+[submodule "vim/pack/plugins/start/airline"]
+	path = vim/pack/plugins/start/airline
+	url = https://github.com/vim-airline/vim-airline
