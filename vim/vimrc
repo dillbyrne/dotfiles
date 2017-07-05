@@ -52,6 +52,8 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <Leader>t :TagbarToggle<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>l :set list! nu!<CR>
+nnoremap <Leader>s :SyntasticToggleMode<CR>
 " Remove trailing whitespaces
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 
