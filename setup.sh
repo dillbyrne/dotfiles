@@ -2,7 +2,7 @@
 
 check_binaries(){
 
-	BINS=(flake8 jshint shellcheck)
+	BINS=(flake8 jshint shellcheck ctags-exuberant)
 
 	for i in ${BINS[*]}
 	do
