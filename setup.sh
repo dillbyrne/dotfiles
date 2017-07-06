@@ -2,13 +2,13 @@
 
 check_binaries(){
 
-BINS=(flake8 jshint)
+	BINS=(flake8 jshint shellcheck)
 
-for i in ${BINS[*]}
-do
-	type $i >/dev/null 2>&1 ||\
-		{ echo >&2 "$i is not installed."; }
-done
+	for i in ${BINS[*]}
+	do
+		type "$i" >/dev/null 2>&1 ||\
+			{ echo >&2 "$i is not installed."; }
+	done
 
 }
 
