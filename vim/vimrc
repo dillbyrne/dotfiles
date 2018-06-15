@@ -53,6 +53,7 @@ endif
 nnoremap <Leader>t :TagbarToggle<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>l :set list! nu!<CR>
+nnoremap <Leader>p :set paste!<CR>
 nnoremap <Leader>s :SyntasticToggleMode<CR>
 " Remove trailing whitespaces
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
@@ -89,16 +90,17 @@ nnoremap <Leader>ffx :!jpm xpi<CR>
 "
 " Airline
 "
-let g:airline_theme = 'onehalfdark'
+let g:airline_theme = 'molokai'
 let g:airline_powerline_fonts = 1
 
 "
 """""""""""""""""""""""""""""""""""""""""""""""
+
 "Colors Preferences
 """""""""""""""""""""""""""""""""""""""""""""""
 
 
-colorscheme onehalfdark
+colorscheme monokai
 set termguicolors
 
 " Invisible character colors
@@ -125,3 +127,5 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_html_checkers =  ["jshint", "validator", "w3"]
+let g:syntastic_python_flake8_exec = 'python3'
