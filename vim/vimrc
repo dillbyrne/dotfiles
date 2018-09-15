@@ -129,3 +129,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_html_checkers =  ["jshint", "validator", "w3"]
 let g:syntastic_python_flake8_exe = 'python3 -m flake8'
+
+
+"function Py3()
+"	let g:syntastic_python_flake8_exe = 'python3 -m flake8'
+"endfunction
+"call Py3()   " default to Python3
