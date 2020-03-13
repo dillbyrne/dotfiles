@@ -3,3 +3,5 @@
 	email = dillbyrne@users.noreply.github.com
 [push]
 	default = simple
+[alias]
+	glog = log --decorate --all --graph
