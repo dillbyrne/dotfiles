@@ -31,7 +31,9 @@ if has("autocmd")
 	"Customisations based on filetype
 	autocmd Filetype html setlocal ts=2 sts=2 sw=2 noet
 	autocmd Filetype css setlocal ts=2 sts=2 sw=2 noet
-	autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 noet
+	autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 noet
+	autocmd Filetype vue  setlocal ts=2 sts=2 sw=2 noet
+
 	autocmd Filetype java setlocal ts=4 sts=4 sw=4 noet
 	autocmd Filetype pyton setlocal ts=4 sts=4 sw=4 noet
 	autocmd Filetype c setlocal ts=4 sts=4 sw=4 noet
@@ -71,16 +73,6 @@ vnoremap <Up> <NOP>
 vnoremap <Down> <NOP>
 vnoremap <Left> <NOP>
 vnoremap <Right> <NOP>
-"
-" Firefox Addon Dev
-"
-
-" exec jpm run
-nnoremap <Leader>ffr :!jpm run -b ff -p test<CR>
-" exec jpm test
-nnoremap <Leader>fft :!jpm test -v -b ff -p test<CR>
-" exec jpm xpi
-nnoremap <Leader>ffx :!jpm xpi<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
