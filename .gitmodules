@@ -19,3 +19,6 @@
 [submodule "vim/pack/plugins/start/vim-airline-themes"]
 	path = vim/pack/plugins/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "vim/vim-colorschemes"]
+	path = vim/vim-colorschemes
+	url = https://github.com/vim-airline/vim-airline-themes
