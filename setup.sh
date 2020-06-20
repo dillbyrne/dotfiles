@@ -2,6 +2,8 @@
 
 check_binaries(){
 
+	#apt-get install flake8 shellcheck exuberant-ctags
+
 	BINS=(flake8 jshint shellcheck ctags-exuberant)
 
 	for i in ${BINS[*]}
@@ -12,8 +14,9 @@ check_binaries(){
 
 }
 
-
 create_symlinks(){
+
+	#TODO check if symlinks exist
 
 	# vim
 	ln -s ~/dotfiles/vim ~/.vim
@@ -28,7 +31,7 @@ create_symlinks(){
 
 
 main(){
-	create_symlinks
+#	create_symlinks
 	check_binaries
 }
 
