@@ -22,3 +22,6 @@
 [submodule "vim/vim-colorschemes"]
 	path = vim/vim-colorschemes
 	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "fonts"]
+	path = fonts
+	url = https://github.com/powerline/fonts
