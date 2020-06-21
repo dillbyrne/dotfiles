@@ -16,15 +16,15 @@ check_binaries(){
 
 
 setup_fonts(){
- mkdir nerd_fonts
- cd nerd_fonts
- wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/LiberationMono.zip
- unzip LiberationMono.zip
- rm *Windows* LiberationMono.zip
- cp * ~/.local/share/fonts
- cd -
+	mkdir nerd_fonts
+	cd nerd_fonts
+	wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/LiberationMono.zip
+	unzip LiberationMono.zip
+	rm *Windows* LiberationMono.zip
+	cp * ~/.local/share/fonts
+	cd -
 
- ./fonts/install.sh
+	./fonts/install.sh
 
 }
 
