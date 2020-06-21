@@ -17,7 +17,7 @@ set laststatus=2										" always show status line
 set noshowmode											" hide mode. Airline plugin provides it
 set smartindent											" use smart indentation
 set cursorline											" highlight current line
-set encoding=utf8
+set encoding=UTF-8
 
 " Only do this if vim was compiled with autocmd
 if has("autocmd")
@@ -82,17 +82,20 @@ vnoremap <Right> <NOP>
 "
 " Airline
 "
-let g:airline_theme = 'zenburn'
+let g:airline_theme = 'molokai'
 let g:airline_powerline_fonts = 1
 
-"
+
+" put a buffer list at the top
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 """""""""""""""""""""""""""""""""""""""""""""""
 
 "Colors Preferences
 """""""""""""""""""""""""""""""""""""""""""""""
 
 
-colorscheme gruvbox
+colorscheme molokai
 set termguicolors
 
 " Invisible character colors
@@ -107,7 +110,6 @@ highlight SpecialKey guifg=#3a4a59
 " Set Gvim font
 set guifont=Liberation\ Mono\ For\ Powerline\ 9
 
-
 """""""""""""""""""""""""""""""""""""""""""""""
 "Syntastic Preferences
 """""""""""""""""""""""""""""""""""""""""""""""
@@ -118,6 +120,6 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
+let g:syntastic_check_on_wq = 0
 let g:syntastic_html_checkers =  ["jshint", "validator", "w3"]
 let g:syntastic_python_flake8_exe = 'python3 -m flake8'
